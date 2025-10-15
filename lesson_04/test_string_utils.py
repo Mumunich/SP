@@ -40,7 +40,7 @@ def test_trim_positive(input_str, expected):
 @pytest.mark.negative
 @pytest.mark.parametrize("input_str, expected", [
     ("", ""),
-    (" ", " "),
+    (" ", ""),
 ])
 def test_trim_negative(input_str, expected):
     assert string_utils.trim(input_str) == expected
