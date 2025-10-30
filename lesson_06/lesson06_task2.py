@@ -4,12 +4,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
-driver.get("http://uitestingplayground.com/ajax")
-button = driver.find_element(By.CSS_SELECTOR, "button.btn.btn-primary")
-button.click()
-green_label = WebDriverWait(driver, 20).until(
-    EC.visibility_of_element_located((By.CLASS_NAME, "bg-success"))
+wait = WebDriverWait(driver, 10)
+driver.get("http://uitestingplayground.com/textinput")
+input_field = driver.find_element(By.ID, "newButtonName")
+input_field.send_keys("SkyPro")
+driver.find_element(By.ID, "updatingButton").click()
+wait.until(
+    EC.text_to_be_present_in_element((By.ID, "updatingButton"), "SkyPro")
 )
-text = green_label.text
-print(text)
+updated_button = driver.find_element(By.ID, "updatingButton")
+print(updated_button.text)
 driver.quit()
