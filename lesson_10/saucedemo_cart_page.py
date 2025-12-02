@@ -41,5 +41,7 @@ class Saucedemo_cart_page:
         """
         self.driver.find_element(By.ID, "continue").click()
         WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "summary_total_label"))
+            EC.presence_of_element_located(
+                (By.CLASS_NAME, "summary_total_label")
+            )
         )

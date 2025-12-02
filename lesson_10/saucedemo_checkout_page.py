@@ -33,7 +33,9 @@ class Saucedemo_checkout_page:
         :return: Строка с итоговой суммой (без префикса "Total: ").
         """
         total_element = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "summary_total_label"))
+            EC.presence_of_element_located(
+                (By.CLASS_NAME, "summary_total_label")
+            )
         )
         total_text = total_element.text
         return total_text.replace("Total: ", "")

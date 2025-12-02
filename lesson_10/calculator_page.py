@@ -41,8 +41,8 @@ class Calculator:
 
         :return: Текст результата из поля "screen".
         """
-        # Результат отображается в поле с классом "screen". Ожидание 45 сек + запас
-        result_element = WebDriverWait(self.driver, 50).until( 
+        # Результат отображается в поле с классом screen
+        WebDriverWait(self.driver, 50).until(
             EC.text_to_be_present_in_element((By.CLASS_NAME, "screen"), "15")
         )
         # После ожидания возвращаем актуальный текст
