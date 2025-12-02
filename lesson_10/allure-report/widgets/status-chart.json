@@ -1,0 +1,1 @@
+[{"uid":"bfc1fadf43d92593","name":"Проверка итоговой суммы покупки в корзине","time":{"start":1764684359076,"stop":1764684363390,"duration":4314},"status":"passed","severity":"critical"},{"uid":"94e1a41102738c5d","name":"Проверка сложения в калькуляторе с задержкой","time":{"start":1764684309425,"stop":1764684359074,"duration":49649},"status":"passed","severity":"critical"}]
